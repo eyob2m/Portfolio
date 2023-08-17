@@ -1,16 +1,75 @@
 html {
     font-size: 15px;
+    
+    scroll-behavior: smooth;
 }
 body {
     overflow-x: hidden;
+  
+color: rgb(237, 228, 228);
+
+
 }
-.mobileC {
-    display: none;
+
+.pp {
+    transform: rotate(-5deg);
+    border: #28195f 1px solid;
 }
+
+.addhtml {
+
+
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../src/assets/html.jpg);
+
+    background-position: center;
+background-size: cover;
+   }
+   .addcss {
+
+
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../src/assets/css.jpg);
+
+    background-position: center;
+background-size: cover;
+   }
+   .addgit {
+
+
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../src/assets/git.jpg);
+
+    background-position: center;
+background-size: cover;
+   }
+   .addjs {
+
+
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../src/assets/js.jpg);
+
+    background-position: center;
+background-size: cover;
+   }
+
+
+.addhtml {
+
+
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../src/assets/html.jpg);
+
+    background-position: center;
+background-size: cover;
+   }
+   .addreact {
+
+
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../src/assets/react.jpg);
+
+    background-position: center;
+background-size: cover;
+   }
 
 .nav {
     width: 100vw;
-    background-color: red;
+    background-color: transparent;
     display: flex;
     height: 70px;
     justify-content: end;
@@ -26,7 +85,7 @@ body {
 }
 
 .navWrapper {
-    background-color: blue;
+    background-color: transparent;
     width: 30%;
     height: 100%;
 display: flex;
@@ -35,16 +94,27 @@ justify-content: center;
 }
 
 .navWrapper span {
-padding: 10px;
+padding: 2px 5px;
 display: flex;
 justify-content: center;
 align-items: center;
 border-radius: 10px;
-height: 70%;
+
+height: fit-content;
+z-index: 999;
+position: fixed;
 font-size: 2rem;
-background-color: aqua;
+background-color: transparent;
+border: 3px #73469b solid;
+transition: .5s;
+cursor: pointer;
+backdrop-filter: saturate(2);
 
 
+
+}
+.navWrapper span:hover {
+    backdrop-filter: saturate(0);   
 }
 
 .home {
@@ -52,9 +122,11 @@ background-color: aqua;
     height: calc(100vh - 70px);
     overflow: hidden;
     display: flex;
+   
     justify-content: center;
     align-items: center;
-    background-color: rgb(159, 73, 73);
+    background-color: transparent;
+    
 }
 .homeWrapper {
     display: flex;
@@ -68,19 +140,46 @@ padding: 40px;
 }
 
 .right {
-    background-color: red;
+    background-color: transparent;
     margin-top: -60px;
     display: flex;
+
     flex-direction: column;
    
 }
 
+
+
+.left h3 {
+    margin-bottom: -5px;
+}
+
 .right h3 {
 font-size: 3rem;
+margin-top: 20px;
 }
 .right span {
-    font-size: 2rem;    
+    font-size: 1.5rem;  
+    background-color: #b032e2; 
+    display: block; 
+    width: fit-content;
+    padding: 0 10px;
+   animation: fr 3s infinite;
+    
 }
+@keyframes fr {
+    0% {
+transform: translateX(0px);
+    }
+    50% {
+      
+        transform: translateX(4px); 
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
  .right h2{
    font-size: 4rem; 
 }
@@ -89,13 +188,24 @@ font-size: 3rem;
     margin-top: 20px;
     
 }
+.btn1:hover {
+    background-color: #5239cd;
+}
 
 .btn1 {
+    
     width: 120px;
+    background-color: transparent;
+    color: rgb(239, 234, 234);
+    outline: none;
+    border: 1px ;
     padding: 5px;
     margin-top: 40px;
     border-radius: 7px;
     font-size: 1.1rem;
+    border: 2px #5239cd solid;
+transition: .5s;
+cursor: pointer;
     
 }
 
@@ -107,21 +217,100 @@ font-size: 3rem;
 .skill {
     width: 100vw;
     height: 100vh;
+    position: relative;
     overflow: hidden;
     display: flex;
+    transition: 1s linear;
     justify-content: center;
     align-items: center;
     background-color: rgb(152, 114, 114);
 
 }
 
-.skillWrapper {
-    padding: 20px;
-    background-color: white;
+.titleS {
+    position: absolute;
+    top: 10%;
+    color: #efe8f5;
+    text-shadow: 4px 2px 2px rgba(202, 38, 214, 0.5);
+   
+    font-size: 3.2rem;
+   
+}
+.titleC {
+    position: absolute;
+    top: 15%;
+    color: #e5deeb;
+    text-shadow: 4px 2px 2px rgba(202, 38, 214, 0.5);
+   
+ left: 22%;
+    font-size: 3.2rem;
+   
+}
 
+.about{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    backdrop-filter: brightness(2);
+ 
+}
+
+.uniLogo {
+    margin-right: 4px;
+    font-size: 1.7rem;
+    align-self: center;
+    color: rgb(74, 74, 184);
+  
+    
+}
+
+.aboutWrapper{
+    display: flex;
+    gap: 20%;
+    padding: 0 200px;
+    
+    justify-content: center;
+    align-items: center;
+
+
+}
+.titleA {
+    top: 7%;
+    color: #ece8f0;
+    text-shadow: 4px 2px 2px rgba(202, 38, 214, 0.5);
+    left: 23%;
+    font-size: 3.2rem;
+   position: absolute;
+}
+.whoAmI, .edu {
+    flex: 1;
+    padding: 28px 30px;
+    border-radius: 10px;
+    background-color: rgba(75, 58, 182, 0.5);
+
+
+}
+.skill{
+    background-color: transparent;
+}
+
+.skillWrapper {
+    transition: 2s linear;
+padding: 50px 100px;
+    background-color: rgba(89, 88, 88, 0.2);
+
+}
+
+.skillWrapper ul li span {
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 .skillWrapper ul li {
     text-align: center;
+
 display: flex;
 flex-direction: column;
 gap: 10px;
@@ -143,8 +332,9 @@ font-size: 1.4rem;
 
 .contact {
     height: 100vh;
-    background-color: red;
+    background-color: transparent;
     width: 100vw;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,12 +343,12 @@ font-size: 1.4rem;
 .contactWrapper {
    width: 80%;
    height: 80%;
-    background-color: green;
+    background-color: rgba(64, 62, 62, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: -200px;
-    gap: 10%;
+    gap: 20%;
 
 }
 
@@ -182,47 +372,167 @@ font-size: 1.4rem;
     display: flex;
    justify-content: flex-start;
     align-items: center;
-    gap: 10px; 
+    gap: 20px; 
 }
 
 form {
     display: flex;
     margin-top: -100px;
+
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;    
 }
 
+form textarea::placeholder , form input::placeholder {
+    color: rgb(159, 132, 174);
+    font-weight: 700;
+}
+
+.about b {
+    font-size: 1.6rem;
+    color: white;
+    text-decoration: underline;
+
+}
+
+
+.about p {
+   
+    margin-top: 30px;
+}
+
 form input , textarea {
-    margin-top: 17px;
+    margin-top: 35px;
     height: 40px;
+    color: rgb(204, 176, 228);
     width: 80%;
     background-color: transparent;
     border: none;
+    font-size: 1rem;
     outline: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
 }
+
+
 
 textarea {
   resize: none;
+  overflow-y: scroll;
     width: 300px;
+    height: 70px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+        
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #3f3457;
+    }
+
+
+.logos {
+    font-size: 30px;
+    color: white;
+    transition: .3s linear;
+}
+
+
+.mailLogo,.phoneLogo {
+    font-size: 30px;
+    color: #5635ce;
+}
+
+
+
+.logos:hover {
+ transform: scale(1.3);
+ color: white;
+
 }
 
 .submitBtn {
-    width: 100px;
+    width: fit-content;
     margin-top: 30px;
     height: 30px;
+    padding: 2px 10px;
+    background-color: white;
+    color: #73469b;
+    font-weight: 700;
     border-radius: 5px;
+    transition: .5s;
+    cursor: pointer;
+    border: none;
+}
+.submitBtn:hover {
+    background-color: #73469b;
+    color: white;
 }
 
 
 
-@media screen and (min-width: 768px) {
+.resume {
+    position: relative;
+    position: fixed;
+   top: 40%;
+border-radius: 10px;
+   right: -9%;
+
+   transform: translate(-50%,-50%);
+   background-color: rgba(0,0,0,0.96);
+   padding: 100px 10px;
+   border: #826fc7 3px solid;
+   display: none;
+ 
+}
+.resume input , .resume textarea {
+    width: 280px;
+    color: white;
+    border-bottom: solid 1px white;
+}
+
+
+
+.close {
+    position: absolute;
+    top: 2%;
+    background-color: #5635ce;
+    padding: 5px;
+    font-size: 1.4rem;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+    right: 2%;
+    transition: .3s;
+}
+
+.dnone {
+    display: block;
+}
+
+.close:hover {
+    background-color: #28195f;
+}
+
+@media screen and (max-width: 768px) {
+.nav {
+    width: 100vw;
+}
+
+
     .navWrapper span { 
         font-size: 1rem;
-        height: 50%;
+        z-index: 999;
+position: fixed;
     }  
-    
+
+    .home {
+       padding-bottom: 10%;
+    }
    
     .homeWrapper {
         display: flex;
@@ -257,6 +567,7 @@ textarea {
             margin-top: 20px;
             
         }
+   
         
        .btn {
             width: 120px;
@@ -280,17 +591,42 @@ textarea {
         .skill {
             width: 100vw;
             height: 100vh;
+            position: relative;
             overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: rgb(152, 114, 114);
+         background-color: red;
         
         }
+
         
+        .resume {
+           
+           top: 50%;
+        border-radius: 10px;
+           left: 50%;
+          width: 80%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+           transform: translate(-50%,-50%);
+           background-color: rgba(0,0,0,0.96);
+           padding: 150px 0;
+        padding-bottom: 0;
+           border: #826fc7 3px solid;
+           display: none;
+         
+         
+        }
+        .dnone {
+            display: block;
+        }
+      
         .skillWrapper {
+       margin-top: 10%;
          padding: 10px;
-            background-color: white;
+        border-radius: 20px;
         
         }
         .skillWrapper ul li {
@@ -318,8 +654,8 @@ textarea {
         
 
         .contact {
-            height: 100vh;
-            background-color: red;
+            height: 80vh;
+           
             width: 100vw;
       display: flex;
       justify-content: flex-end;
@@ -327,9 +663,11 @@ textarea {
         }
         
         .contactWrapper {
+            border-radius: 20px;
            width: 100%;
+           position: relative;
          height: 100%;
-            background-color: green;
+         
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -339,13 +677,18 @@ textarea {
         
         }
         
-    .mobileC {
-        display: block;
-    } 
+
       
-.contactWrapper h2 {
-   display: none;
+
+.titleC,.titleA,.titleS {
+  position: absolute;
+font-size: 2rem;
+top: 0;
+left: 10%;
+
+
 }
+
 
 .contactWrapper .emailAdd, .phoneAdd {
     font-size: 1.1rem;
@@ -368,11 +711,13 @@ textarea {
 
 form {
     display: flex;
-    margin-top: -100px;
+    margin-top: -150px;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column; 
-    margin-bottom: 50px;   
+    margin-bottom: 70px; 
+
+    margin-left: 5%;
 }
 
 form input , textarea {
@@ -396,7 +741,7 @@ textarea {
 
 
 .submitBtn {
-    width: 100px;
+    width: fit-content;
   
     height: 30px;
     border-radius: 5px;
@@ -404,6 +749,26 @@ textarea {
 
 
 
+
+.aboutWrapper {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    font-size: .8rem;
+  
+}
+
+.whoAmI {
+    width: 100%;
+   margin-bottom: 10%;
+}
+.about {
+    height: 90vh;
+
+}
 
 }
 

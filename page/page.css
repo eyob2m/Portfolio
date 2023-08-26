@@ -13,7 +13,9 @@ color: rgb(237, 228, 228);
 
 .pp {
     transform: rotate(-5deg);
-    border: #28195f 1px solid;
+    border: #28195f 4px solid;
+    filter: brightness(-3);
+    padding: 10px;
 }
 
 .addhtml {
@@ -104,7 +106,7 @@ height: fit-content;
 z-index: 999;
 position: fixed;
 font-size: 2rem;
-background-color: transparent;
+background-color: rgb(7, 0, 47,.5) ;
 border: 3px #73469b solid;
 transition: .5s;
 cursor: pointer;
@@ -231,8 +233,7 @@ cursor: pointer;
     position: absolute;
     top: 10%;
     color: #efe8f5;
-    text-shadow: 4px 2px 2px rgba(202, 38, 214, 0.5);
-   
+    font-family: 'Merriweather', serif;
     font-size: 3.2rem;
    
 }
@@ -240,7 +241,7 @@ cursor: pointer;
     position: absolute;
     top: 15%;
     color: #e5deeb;
-    text-shadow: 4px 2px 2px rgba(202, 38, 214, 0.5);
+    font-family: 'Merriweather', serif;
    
  left: 22%;
     font-size: 3.2rem;
@@ -249,8 +250,9 @@ cursor: pointer;
 
 .about{
     height: 90vh;
+
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: relative;
 
@@ -278,18 +280,43 @@ cursor: pointer;
 
 }
 .titleA {
+    font-family: 'Merriweather', serif;
     top: 7%;
     color: #ece8f0;
-    text-shadow: 4px 2px 2px rgba(202, 38, 214, 0.5);
+
     left: 23%;
     font-size: 3.2rem;
    position: absolute;
 }
+
+.opaz {
+    flex: 1;
+    transition: 1s linear;
+    padding: 28px 30px;
+    opacity: 0;
+    border-radius: 10px;
+
+
+ 
+  
+}
+.opaz2 {
+    flex: 1;
+    transition: 1s linear;
+    opacity: 0;
+    padding: 28px 30px;
+    border-radius: 10px;
+
+  
+}
 .whoAmI, .edu {
     flex: 1;
+    opacity: 1;
+    transition: 1s linear;
     padding: 28px 30px;
     border-radius: 10px;
     background-color: rgba(75, 58, 182, 0.5);
+
 
 
 }
@@ -317,9 +344,19 @@ gap: 10px;
 font-size: 1.4rem;
 } 
 
-.skillWrapper ul  {
+.skillWrapper .ul  {
     height: 100%;
  gap: 20px;
+ transition: 1s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ulv  {
+    height: 100%;
+ gap: 100px;
+ transition: 1s linear;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -432,7 +469,7 @@ textarea {
         
     }
     ::-webkit-scrollbar-thumb {
-        background-color: #3f3457;
+        background-color: rgb(7, 0, 47) ;
     }
 
 
@@ -518,6 +555,8 @@ border-radius: 10px;
     background-color: #28195f;
 }
 
+
+
 @media screen and (max-width: 768px) {
 .nav {
     width: 100vw;
@@ -532,6 +571,7 @@ position: fixed;
 
     .home {
        padding-bottom: 10%;
+    
     }
    
     .homeWrapper {
@@ -549,7 +589,7 @@ position: fixed;
 
     .homeWrapper img {
        
-        width: 80%;
+        width: 75%;
         object-fit: contain;
     }
 
@@ -563,18 +603,30 @@ position: fixed;
            font-size: 2.3rem; 
         }
         .right p {
-            width: 80%;
+            width: 75%;
             margin-top: 20px;
             
         }
+   .home a {
+    width: 100%;
    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+height: 80px;
+    text-decoration: none;
+   }
+   .right{
+  
+   }
         
-       .btn {
-            width: 120px;
+       .btn1 {
+            width: 70%;
             padding: 5px;
-            margin-top: 40px;
+            margin-top: 25px;
             border-radius: 7px;
-            font-size: 1.1rem;
+            font-size: 1.5rem;
+      
             
         }
 
@@ -596,9 +648,11 @@ position: fixed;
             display: flex;
             justify-content: center;
             align-items: center;
-         background-color: red;
+
         
         }
+
+     
 
         
         .resume {
@@ -624,8 +678,10 @@ position: fixed;
         }
       
         .skillWrapper {
-       margin-top: 10%;
+       width: 90%;
+       margin-top: 30%;
          padding: 10px;
+         margin-bottom: 15%;
         border-radius: 20px;
         
         }
@@ -654,8 +710,8 @@ position: fixed;
         
 
         .contact {
-            height: 80vh;
-           
+            height: 90vh;
+           margin-top: 30px;
             width: 100vw;
       display: flex;
       justify-content: flex-end;
@@ -682,8 +738,8 @@ position: fixed;
 
 .titleC,.titleA,.titleS {
   position: absolute;
-font-size: 2rem;
-top: 0;
+font-size: 2.3rem;
+top: 20px;
 left: 10%;
 
 
@@ -710,6 +766,7 @@ left: 10%;
 }
 
 form {
+
     display: flex;
     margin-top: -150px;
     align-items: flex-start;
@@ -720,14 +777,26 @@ form {
     margin-left: 5%;
 }
 
+.ulv  {
+    height: 100%;
+ gap: 20px;
+ transition: .5s linear;
+transform: translateY(200px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 form input , textarea {
-    margin-top: 50px;
+    margin-top: 30px;
     height: 40px;
     width: 80%;
+
     background-color: transparent;
     border: none;
+    border-bottom: 2px solid white;
     outline: none;
-    border-bottom: 1px solid black;
+ 
 }
 
 .left .btn1 {
@@ -742,12 +811,19 @@ textarea {
 
 .submitBtn {
     width: fit-content;
-  
+    
     height: 30px;
     border-radius: 5px;
 }
 
+.pp {
 
+  transform: rotate(0deg);
+    border: #28195f 4px solid;
+    filter: brightness(-3);
+    padding: 10px;
+    border-radius: 40%;
+}
 
 
 .aboutWrapper {
@@ -757,18 +833,46 @@ textarea {
     justify-content: center;
     align-items: center;
     padding: 10%;
+    padding-bottom: 0%;
     font-size: .8rem;
   
 }
 
 .whoAmI {
     width: 100%;
-   margin-bottom: 10%;
+   margin-bottom: 20%;
 }
 .about {
     height: 90vh;
+    margin-top: 20%;
+    display: flex;
+ 
 
 }
+
+.opaz {
+    width: 100%;
+    margin-bottom: 20%;
+    flex: 1;
+    transition: 1s linear;
+    padding: 28px 30px;
+    opacity: 0;
+    border-radius: 10px;
+   
+
+ 
+  
+}
+.opaz2 {
+    flex: 1;
+    transition: 1s linear;
+    opacity: 0;
+    padding: 28px 30px;
+    border-radius: 10px;
+
+  
+}
+
 
 }
 

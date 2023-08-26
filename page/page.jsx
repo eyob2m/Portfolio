@@ -1,22 +1,85 @@
 import './page.css'
-import ppic from './pic7.png'
+import  { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import ppic from '../src/assets/ppic.png'
 import js from '../src/assets/js.jpg'
 import react from '../src/assets/react.jpg'
 import git from '../src/assets/git.jpg'
 import html from '../src/assets/html.jpg'
 import css from '../src/assets/css.jpg'
 import { AiOutlineClose } from 'react-icons/ai'
+
 import { LiaUniversitySolid } from 'react-icons/lia'
 import {AiOutlineGithub,  AiOutlineInstagram,AiOutlineLinkedin, AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
 import { LiaTelegramPlane } from "react-icons/lia";
 import { useState } from 'react'
+
+import { useInView } from 'react-intersection-observer'
+
+
 export default function Page() {
+  let inputn = useRef();
+  let inputm = useRef();
+  let inpute = useRef();
+  let inputn1 = useRef();
+  let inpute1 = useRef();
+  let inputm1 = useRef();
+  let form = useRef();
+  let form2 = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+   
+    emailjs.sendForm('service_imsqgdo', 'template_4wxz28f', form.current, 'clWwjzM_Hia2rTXhm')
+      .then((result) => {
+          console.log(result.text);
+                  setTimeout( async ()=> {  document.querySelectorAll('.submitBtn')[0].innerHTML = await "Submit"},5000);  document.querySelectorAll('.submitBtn')[0].innerHTML = "Message sent, I will Respond ASAP"; 
+           inputn.current.value = ''
+    inputm.current.value = ''
+    inpute.current.value = ''
+    inputn1.current.value = ''
+    inpute1.current.value = ''
+    inputm1.current.value = ''; }, (error) => {
+            setTimeout( async ()=> {  document.querySelectorAll('.submitBtn')[0].innerHTML = await "Submit"},5000);  document.querySelectorAll('.submitBtn')[0].innerHTML = "Message not'sent"; 
+              });
+  };
+  const sendEmail2 = (e) => {
+    e.preventDefault();
+   
+    emailjs.sendForm('service_imsqgdo', 'template_4wxz28f', form2.current, 'clWwjzM_Hia2rTXhm')
+      .then((result) => {
+          console.log(result.text);
+           setTimeout( async ()=> {  document.querySelectorAll('.submitBtn')[1].innerHTML = await "Submit"},5000);  document.querySelectorAll('.submitBtn')[1].innerHTML = "Message sent, I will Respond ASAP"; 
+                     inputn.current.value = ''
+    inputm.current.value = ''
+    inpute.current.value = ''
+    inputn1.current.value = ''
+    inpute1.current.value = ''
+    inputm1.current.value = ''; }, (error) => {
+      setTimeout( async ()=> {  document.querySelectorAll('.submitBtn')[1].innerHTML = await "Submit"},5000);  document.querySelectorAll('.submitBtn')[1].innerHTML = "Message not'sent"; 
+         
+      });
+  };
 
-function subFun(e) {
-  e.preventDefault();  setTimeout( async ()=> {  document.querySelectorAll('.submitBtn')[1].innerHTML = await "Submit"},5000);  document.querySelectorAll('.submitBtn')[1].innerHTML = "Message sent, I will Respond ASAP"; }
 
-function subFun2(e) {
-   e.preventDefault();  setTimeout( async ()=> {  document.querySelectorAll('.submitBtn')[0].innerHTML = await "Submit"},5000);  document.querySelectorAll('.submitBtn')[0].innerHTML = "Message sent, I will Respond ASAP"; }
+
+  const { ref, inView} = useInView({
+    /* Optional options */
+    threshold: 1,
+    triggerOnce: true,
+
+
+
+  });
+
+  
+  const { ref: ref2, inView: inView2} = useInView({
+    /* Optional options */
+    threshold: 1,
+    triggerOnce: true,
+   
+
+
+  });
 
 
 const [r,setr] = useState(true)
@@ -67,7 +130,7 @@ function skG(e) {
   <>
    <div className="nav">
 <div className="navWrapper">
- <span onClick={resumec} className='resume0' >Resume</span> 
+ <span onClick={resumec} className='resume0' >Get in touch</span> 
 </div>
    </div>
 
@@ -80,9 +143,9 @@ function skG(e) {
   <h2>Hello i'm</h2>
   <h3>Eyob Betemariam</h3>
   <span>Frontend Developer</span>
-   <p>Im Currently software engineering student at aastu interested in working as freelance , parttime and full time frontend developer
+   <p>Currently software engineering student at Addis ABaba Science and technology University, working on front-end development using the REACT framework, Acquired a strong knowledge of HTML, CSS, and JavaScript and other front end frameworks.
    </p> 
-   <a download href="../src/assets/robbins.pdf"> <button className='btn1' >Download CV</button></a>
+   <a href="../src/assets/resume.pdf" rel="noopener noreferrer" target="_blank">  <button className='btn1' >Resume</button></a>
    </div>
   
  </div>
@@ -90,16 +153,17 @@ function skG(e) {
 </div>
 
 
-<div className="about">
+<div className='about'>
 <h2 className='titleA'>About</h2>
   <div className='aboutWrapper'>
-  <div className="whoAmI">
+  <div ref={ref}  className={ inView ? 'whoAmI' : 'opaz' }>
   <b>Who I am</b>
 <p>
-Im Currently software engineering student at aastu interested in working as freelance , parttime and full time frontend developer Im Currently software engineering student at aastu interested in working as freelance , parttime and full time frontend developer
-</p>
+My name is Eyob Betemariam and I am a software student at Addis Ababa Science and Technology University. I specialize in front-end development, particularly in the REACT framework. Throughout my studies and work experiences, I have learned how to effectively collaborate with teams and think creatively to find innovative solutions.
+
+ My ultimate goal is to work on projects that have a positive impact on society and make a difference in people's lives. I am excited to contribute my skills and knowledge to meaningful projects.</p>
 </div>
-<div className="edu">
+<div ref={ref}  className={ inView ? 'edu' : 'opaz2' }>
 <b>Education</b>
 <p>
 <LiaUniversitySolid className='uniLogo' /> Addis Ababa Science And Technology University <br />
@@ -116,14 +180,15 @@ Basic Electronics and Communication Multimedia<br />
 
 
 <div className="skill">
-<div className="skillWrapper">
 <h2 className="titleS">Skills</h2>
-<ul>
+<div className="skillWrapper">
+
+<ul  ref={ref2} className={ inView2 ? 'ul' : 'ulv' } >
   <li>  <span>Html</span> <img  onMouseLeave={skG} onMouseEnter={skF} src={html} alt="Html Pic" /> </li>
   <li> <span>Css</span><img onMouseLeave={skG} onMouseEnter={skF} src={css} alt="Css Pic" /></li>
   <li> <span>Javascript</span><img onMouseLeave={skG} onMouseEnter={skF} src={js} alt="Js Pic" /></li>
   <li> <span>React</span><img onMouseLeave={skG} onMouseEnter={skF} src={react} alt="React Pic" /></li>
-  <li> <span>Git / Github</span><img onMouseLeave={skG} onMouseEnter={skF} src={git} alt="Git Pic" /></li>
+  <li> <span>Git</span><img onMouseLeave={skG} onMouseEnter={skF} src={git} alt="Git Pic" /></li>
 </ul>
 </div>
 </div>
@@ -135,21 +200,21 @@ Basic Electronics and Communication Multimedia<br />
 <div className="contactWrapper">
 <div className="titleC">Contact</div>
 <div className="left">
-<h3 className='emailAdd' > <AiOutlinePhone className='phoneLogo'/>  eyob2etemariam@gmail.com</h3>
-<h3 className='phoneAdd'> <AiOutlineMail className='mailLogo' /> +251985238243</h3>
+<h3 className='emailAdd' >  <AiOutlineMail className='mailLogo' />  eyob2etemariam@gmail.com</h3>
+<h3 className='phoneAdd'><AiOutlinePhone className='phoneLogo'/> +251985238243</h3>
 <div className="linksList">  
-<a href='g.com' className=' logos gitLogo' > <AiOutlineGithub  />     </a>
-<a href='g.com' className=' logos instaLogo' >  <AiOutlineInstagram /></a>
-<a href='g.com' className=' logos linkLogo' >  <AiOutlineLinkedin /></a>
-<a href='g.com' className=' logos teleLogo' >   <LiaTelegramPlane /></a>
+<a href='https://github.com/eyob2m'  className=' logos gitLogo' rel="noopener noreferrer" target="_blank" > <AiOutlineGithub  />     </a>
+<a href='https://instagram.com/eyob2m' className=' logos instaLogo' rel="noopener noreferrer" target="_blank">  <AiOutlineInstagram /></a>
+<a href='https://www.linkedin.com/in/eyob-betemariam-3760a0278' className=' logos linkLogo'rel="noopener noreferrer" target="_blank" >  <AiOutlineLinkedin /></a>
+<a href='https://t.me/eyob2m' className=' logos teleLogo'rel="noopener noreferrer" target="_blank" >   <LiaTelegramPlane /></a>
 
 </div>
- <a download href="../src/assets/robbins.pdf"> <button className='btn1' >Download CV</button></a>
+ <a download href="../src/assets/resume.pdf"> <button className='btn1' >Download CV</button></a>
 </div>
-<form  onSubmit={subFun2}  action="#">
-<input className='nameInput' placeholder='Name' type="text" name='subject'/>
-<input className='emailInput' placeholder='Email' type="email" name='email' />
-<textarea className='msgInput' placeholder='Your Message' name="msg" id="" cols="20"  rows="10"></textarea>
+<form ref={form} onSubmit={sendEmail}   action="#">
+<input autoComplete="off" ref={inputn} className='nameInput' placeholder='Name' type="text" name='user_name'/>
+<input autoComplete="off" ref={inpute} className='emailInput' placeholder='Email' required type="email" name='user_email' />
+<textarea ref={inputm} className='msgInput' placeholder='Your Message' required name="message" id="" cols="20"  rows="10"></textarea>
 <button className='submitBtn' >Submit</button>
 
 
@@ -161,10 +226,10 @@ Basic Electronics and Communication Multimedia<br />
 </div>
 
 <div className="resume">
-<form onSubmit={subFun}  action="#">
-<input className=' in nameInput' placeholder='Name' type="text" name='subject'/>
-<input className='in emailInput' placeholder='Email' type="email" name='email' />
-<textarea className=' in msgInput' placeholder='Your Message' name="msg" id="" cols="20"  rows="10"></textarea>
+<form ref={form2} onSubmit={sendEmail2}   action="#">
+<input autoComplete="off" ref={inputn1} className=' in nameInput' placeholder='Name' type="text" name='user_name'/>
+<input autoComplete="off" ref={inpute1} className='in emailInput' required placeholder='Email' type="email" name='user_email' />
+<textarea ref={inputm1} className=' in msgInput' placeholder='Your Message' required name="message" id="" cols="20"  rows="10"></textarea>
 <button className='submitBtn' >Submit</button>
 
 

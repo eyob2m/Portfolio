@@ -679,7 +679,7 @@ height: 80px;
       
         .skillWrapper {
        width: 90%;
-       margin-top: 30%;
+       margin-top: 10%;
          padding: 10px;
          margin-bottom: 15%;
         border-radius: 20px;
@@ -690,6 +690,7 @@ height: 80px;
         display: flex;
         flex-direction: column;
         gap: 10px;
+     
         height: 50%;
         font-size: 1.4rem;
         } 

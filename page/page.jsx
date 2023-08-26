@@ -145,7 +145,7 @@ function skG(e) {
   <span>Frontend Developer</span>
    <p>Currently software engineering student at Addis ABaba Science and technology University, working on front-end development using the REACT framework, Acquired a strong knowledge of HTML, CSS, and JavaScript and other front end frameworks.
    </p> 
-   <a href="../src/assets/resume.pdf" rel="noopener noreferrer" target="_blank">  <button className='btn1' >Resume</button></a>
+   <a href="/src/assets/resume.pdf" rel="noopener noreferrer" target="_blank">  <button className='btn1' >Resume</button></a>
    </div>
   
  </div>
@@ -209,7 +209,7 @@ Basic Electronics and Communication Multimedia<br />
 <a href='https://t.me/eyob2m' className=' logos teleLogo'rel="noopener noreferrer" target="_blank" >   <LiaTelegramPlane /></a>
 
 </div>
- <a download href="../src/assets/resume.pdf"> <button className='btn1' >Download CV</button></a>
+ <a download href="/src/assets/resume.pdf"> <button className='btn1' >Download CV</button></a>
 </div>
 <form ref={form} onSubmit={sendEmail}   action="#">
 <input autoComplete="off" ref={inputn} className='nameInput' placeholder='Name' type="text" name='user_name'/>

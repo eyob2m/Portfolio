@@ -186,7 +186,8 @@ transform: translateX(0px);
    font-size: 4rem; 
 }
 .right p {
-    width: 70%;
+    width: 80%;
+    text-align: left;
     margin-top: 20px;
     
 }

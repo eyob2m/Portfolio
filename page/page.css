@@ -680,8 +680,9 @@ height: 80px;
       
         .skillWrapper {
        width: 90%;
-       margin-top: 10%;
+       margin-top: 15%;
          padding: 10px;
+    
          margin-bottom: 15%;
         border-radius: 20px;
         
@@ -699,6 +700,7 @@ height: 80px;
         .skillWrapper ul  {
             height: 100%;
          gap: 20px;
+   
             display: flex;
             flex-wrap: wrap;
             justify-content: center;

@@ -67,7 +67,7 @@ export default function Page() {
 
   const { ref, inView} = useInView({
     /* Optional options */
-    threshold: 1,
+    threshold: .7,
     triggerOnce: true,
 
 
@@ -77,7 +77,7 @@ export default function Page() {
   
   const { ref: ref2, inView: inView2} = useInView({
     /* Optional options */
-    threshold: 1,
+    threshold: .5,
     triggerOnce: true,
    
 
@@ -184,7 +184,7 @@ Basic Electronics and Communication Multimedia<br />
 
 <div className="skill">
 <h2 className="titleS">Skills</h2>
-<div className="skillWrapper">
+<div  className="skillWrapper">
 
 <ul  ref={ref2} className={ inView2 ? 'ul' : 'ulv' } >
   <li>  <span>Html</span> <img  onMouseLeave={skG} onMouseEnter={skF} src={html} alt="Html Pic" /> </li>

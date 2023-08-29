@@ -643,7 +643,7 @@ height: 80px;
 
         .skill {
             width: 100vw;
-            height: 100vh;
+            height: 90vh;
             position: relative;
             overflow: hidden;
             display: flex;
@@ -690,6 +690,7 @@ height: 80px;
         .skillWrapper ul li {
             text-align: center;
         display: flex;
+
         flex-direction: column;
         gap: 10px;
      
@@ -699,6 +700,8 @@ height: 80px;
         
         .skillWrapper ul  {
             height: 100%;
+       
+            border-radius: 20px;
          gap: 20px;
    
             display: flex;
@@ -708,7 +711,7 @@ height: 80px;
         }
         
         .skillWrapper img {
-            height: 150px;
+            height: 130px;
         }
         
         
@@ -784,11 +787,15 @@ form {
 .ulv  {
     height: 100%;
  gap: 20px;
+ background-color: rgb(16, 16, 7,.3);
+ padding: 3px;
  transition: .5s linear;
 transform: translateY(200px);
+
     display: flex;
     justify-content: center;
     align-items: center;
+ 
 }
 
 form input , textarea {

@@ -1,3 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+Allow: /public/
+Sitemap: https://eyob2m.vercel.app/mysitess.xml

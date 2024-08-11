@@ -1,0 +1,2 @@
+# https://eyob2m.vercel.app/
+User-agent: *

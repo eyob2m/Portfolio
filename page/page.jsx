@@ -203,12 +203,12 @@ export default function Page() {
             <p>
               Currently software engineering student at Addis Ababa Science and
               technology University, working on front-end development using the
-              REACT framework, Acquired a strong knowledge of HTML, Tailwind, CSS, and
+              REACT framework, Acquired a strong knowledge of HTML, Tailwind, CSS, RTK, and
               JavaScript and other front end frameworks.
             </p>
             <a href={pdf} rel="noopener noreferrer" target="_blank">
               {" "}
-              <button className="btn1">Resume</button>
+              <button className="btn1">Resume </button>
             </a>
           </div>
         </div>

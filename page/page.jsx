@@ -177,11 +177,16 @@ export default function Page() {
   return (
     <>
       <div className="nav">
+        
         <Helmet>
           <title>Eyob Betemariam</title>
+          <meta name="keywords" content="eyob, betemariam, eyob2m, mern stack, ethiopia, addis ababa,software engineering, freelancer"/>
           <meta
             name="description"
-            content="aastu fifth year software engineering student and front end developer"
+            content=" Currently software engineering student at Addis Ababa Science and
+              technology University, working on MERN stack development using the
+              REACT framework, Acquired a strong knowledge of HTML, Tailwind, CSS, RTK,Express.js
+              JavaScript and other front end frameworks."
           />
           <link rel="canonical" href="/" />
         </Helmet>
@@ -202,8 +207,8 @@ export default function Page() {
             <span>Frontend Developer</span>
             <p>
               Currently software engineering student at Addis Ababa Science and
-              technology University, working on front-end development using the
-              REACT framework, Acquired a strong knowledge of HTML, Tailwind, CSS, RTK, and
+              technology University, working on MERN stack development using the
+              REACT framework, Acquired a strong knowledge of HTML, Tailwind, CSS, RTK,Express.js
               JavaScript and other front end frameworks.
             </p>
             <a href={pdf} rel="noopener noreferrer" target="_blank">

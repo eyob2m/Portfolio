@@ -183,12 +183,15 @@ export default function Page() {
           <meta name="keywords" content="eyob, betemariam, eyob2m, mern stack, ethiopia, addis ababa,software engineering, freelancer"/>
           <meta
             name="description"
-            content=" Currently software engineering student at Addis Ababa Science and
+            content="Software engineering student at Addis Ababa Science and
               technology University, working on MERN stack development using the
               REACT framework, Acquired a strong knowledge of HTML, Tailwind, CSS, RTK,Express.js
               JavaScript and other front end frameworks."
           />
-          <link rel="canonical" href="/" />
+         <meta property="og:title" content="Instagram"/>
+         <meta property="og:description" content="Instagram Profile"/>
+         <meta property="og:url" content="https://www.instagram.com/eyob2m"/>
+         <meta property="og:image" content={ppic}/>
         </Helmet>
         <div className="navWrapper">
           <span onClick={resumec} className="resume0">
@@ -208,7 +211,7 @@ export default function Page() {
             <p>
               Currently software engineering student at Addis Ababa Science and
               technology University, working on MERN stack development using the
-              REACT framework, Acquired a strong knowledge of HTML, Tailwind, CSS, RTK,Express.js
+              REACT framework, Acquired a strong knowledge of HTML, Tailwind, CSS, RTK, Express.js
               JavaScript and other front end frameworks.
             </p>
             <a href={pdf} rel="noopener noreferrer" target="_blank">
@@ -226,8 +229,8 @@ export default function Page() {
             <b>Who I am</b>
             <p>
               My name is Eyob Betemariam and I am a software student at Addis
-              Ababa Science and Technology University. I specialize in front-end
-              development, particularly in the REACT framework. Throughout my
+              Ababa Science and Technology University. I specialize in MERN stack
+              development, particularly in the REACT ans Express.js frameworks. Throughout my
               studies and work experiences, I have learned how to effectively
               collaborate with teams and think creatively to find innovative
               solutions. My ultimate goal is to work on projects that have a

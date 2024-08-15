@@ -50,7 +50,7 @@ export default function Page() {
               await "Submit";
           }, 5000);
           document.querySelectorAll(".submitBtn")[0].innerHTML =
-            "Message sent, I will Respond ASAP";
+            "Message sent, I will try to Respond ASAP";
           inputn.current.value = "";
           inputm.current.value = "";
           inpute.current.value = "";
@@ -188,12 +188,14 @@ export default function Page() {
               REACT framework, Acquired a strong knowledge of HTML, Tailwind, CSS, RTK,Express.js
               JavaScript and other front end frameworks."
           />
+          
          <meta property="og:title" content="Instagram"/>
          <meta property="og:description" content="Instagram Profile"/>
          <meta property="og:url" content="https://www.instagram.com/eyob2m"/>
          <meta property="og:image" content={ppic}/>
         </Helmet>
         <div className="navWrapper">
+
           <span onClick={resumec} className="resume0">
             Get in touch
           </span>

@@ -107,7 +107,7 @@ z-index: 999;
 position: fixed;
 font-size: 2rem;
 background-color: rgb(7, 0, 47,.5) ;
-border: 3px #73469b solid;
+border: 3px #504136 solid;
 transition: .5s;
 cursor: pointer;
 backdrop-filter: saturate(2);
@@ -162,7 +162,7 @@ margin-top: 20px;
 }
 .right span {
     font-size: 1.5rem;  
-    background-color: #b032e2; 
+    background-color: #a49e8d; 
     display: block; 
     width: fit-content;
     padding: 0 10px;
@@ -192,7 +192,7 @@ transform: translateX(0px);
     
 }
 .btn1:hover {
-    background-color: #5239cd;
+    background-color: #342A23;
 }
 
 .btn1 {
@@ -206,7 +206,7 @@ transform: translateX(0px);
     margin-top: 40px;
     border-radius: 7px;
     font-size: 1.1rem;
-    border: 2px #5239cd solid;
+    border: 2px #342A23 solid;
 transition: .5s;
 cursor: pointer;
     
@@ -500,7 +500,7 @@ textarea {
     height: 30px;
     padding: 2px 10px;
     background-color: white;
-    color: #73469b;
+    color: #504136;
     font-weight: 700;
     border-radius: 5px;
     transition: .5s;
@@ -508,7 +508,7 @@ textarea {
     border: none;
 }
 .submitBtn:hover {
-    background-color: #73469b;
+    background-color: #504136;
     color: white;
 }
 

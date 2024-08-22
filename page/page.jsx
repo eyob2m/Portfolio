@@ -1,7 +1,7 @@
 import "./page.css";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import ppic from "../src/assets/ppic.png";
+import ppic from "../src/assets/photo.png";
 import js from "../src/assets/js.jpg";
 import react from "../src/assets/react.jpg";
 import git from "../src/assets/git.jpg";

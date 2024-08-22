@@ -13,7 +13,7 @@ color: rgb(237, 228, 228);
 
 .pp {
     transform: rotate(-5deg);
-    border: #28195f 4px solid;
+    border: #3b3845 4px solid;
     filter: brightness(-3);
     padding: 10px;
 }
@@ -107,7 +107,7 @@ z-index: 999;
 position: fixed;
 font-size: 2rem;
 background-color: rgb(7, 0, 47,.5) ;
-border: 3px #504136 solid;
+border: 3px #403b37 solid;
 transition: .5s;
 cursor: pointer;
 backdrop-filter: saturate(2);

@@ -106,17 +106,16 @@ height: fit-content;
 z-index: 999;
 position: fixed;
 font-size: 2rem;
-background-color: rgb(7, 0, 47,.5) ;
-border: 3px #403b37 solid;
+
 transition: .5s;
 cursor: pointer;
-backdrop-filter: saturate(2);
+
 
 
 
 }
 .navWrapper span:hover {
-    backdrop-filter: saturate(0);   
+  
 }
 
 .home {
@@ -226,7 +225,7 @@ cursor: pointer;
     transition: 1s linear;
     justify-content: center;
     align-items: center;
-    background-color: rgb(152, 114, 114);
+   
 
 }
 
@@ -316,7 +315,7 @@ cursor: pointer;
     transition: 1s linear;
     padding: 28px 30px;
     border-radius: 10px;
-    background-color: rgba(75, 58, 182, 0.5);
+    background-color: rgba(45, 45, 49, 0.5);
 
 
 
@@ -328,7 +327,7 @@ cursor: pointer;
 .skillWrapper {
     transition: 2s linear;
 padding: 50px 100px;
-    background-color: rgba(89, 88, 88, 0.2);
+    background-color: rgba(82, 72, 72, 0.2);
 
 }
 
@@ -381,8 +380,7 @@ font-size: 1.4rem;
 .contactWrapper {
    width: 80%;
    height: 80%;
-    background-color: rgba(64, 62, 62, 0.2);
-    display: flex;
+  display: flex;
     align-items: center;
     justify-content: center;
     margin-left: -200px;
@@ -539,7 +537,7 @@ border-radius: 10px;
 .close {
     position: absolute;
     top: 2%;
-    background-color: #5635ce;
+ 
     padding: 5px;
     font-size: 1.4rem;
     border-top-right-radius: 5px;
@@ -830,7 +828,7 @@ textarea {
 .pp {
 
   transform: rotate(0deg);
-    border: #28195f 4px solid;
+    margin-top: 200px;
     filter: brightness(-3);
     padding: 10px;
     border-radius: 40%;

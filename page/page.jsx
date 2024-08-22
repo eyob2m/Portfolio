@@ -209,12 +209,10 @@ export default function Page() {
           <div className="right">
             <h2>Hello i&apos;m</h2>
             <h3>Eyob Betemariam</h3>
-            <span>Frontend Developer</span>
+            <span>MERN stack Developer</span>
             <p>
               Currently software engineering student at Addis Ababa Science and
-              technology University, working on MERN stack development using the
-              REACT framework, Acquired a strong knowledge of HTML, Tailwind, CSS, RTK, Express.js
-              JavaScript and other front end frameworks.
+              technology University, working on MERN stack development. Acquired a strong knowledge of React, Expres.JS, Tailwind CSS, Redux and Git.
             </p>
             <a href={pdf} rel="noopener noreferrer" target="_blank">
               {" "}
